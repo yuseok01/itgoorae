@@ -12,10 +12,10 @@ import audio from '@/assets/mp3.mp3';
 		</div>
 		<div class="overlay">
 			<TheHeader />
-			<div class="content">
-				<TheView />
-				<AppAlert />
-			</div>
+		</div>
+		<div class="content">
+			<TheView />
+			<AppAlert class="alert" />
 		</div>
 	</div>
 	<audio controls volume="0.2" autoplay class="audio-player">
@@ -25,6 +25,12 @@ import audio from '@/assets/mp3.mp3';
 </template>
 
 <style scoped>
+.overlay {
+	z-index: 2;
+}
+.alert {
+	z-index: 3;
+}
 .background {
 	position: relative;
 	width: 100%;
@@ -51,6 +57,7 @@ import audio from '@/assets/mp3.mp3';
 
 .container {
 	max-width: 940px;
+	z-index: 1;
 }
 .audio-player {
 	position: fixed;
